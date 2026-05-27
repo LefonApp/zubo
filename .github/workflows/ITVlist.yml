@@ -4,7 +4,10 @@ on:
   schedule:
     - cron: "0 9,21 * * *"
   workflow_dispatch:
-
+  
+permissions:
+  contents: write # 关键配置，允许 Actions 写入仓库内容
+  
 jobs:
   run-itvlist:
     runs-on: ubuntu-latest
